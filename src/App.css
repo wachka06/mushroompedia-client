@@ -1,0 +1,119 @@
+* {
+  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+  Helvetica,"Calibri","Roboto",Arial,sans-serif;
+}
+
+.App {
+
+}
+
+.add-mushroom {
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  margin: 1em;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  background-color: black;
+  color: white;
+  padding: 1.5% 1.5% 1.5% 2%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.mushroom-form-modal {
+  background-color: gray;
+  opacity: 0.7;
+  margin-top: 8%;
+  margin-left: 2%;
+  margin-right: 2%;
+  min-width: 420px;
+  height: 25em;
+  z-index: 1;
+}
+
+.close-button {
+  font-size: 1.5em;
+  font-weight: bold;
+  float: right;
+  margin: 0.2em 0.6em;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+.mushroom-form {
+  padding: 0.5em 0.5em 0.5em 1.5em;
+  font-size: 0.9em;
+}
+
+.mushroom-form label {
+  display: block;
+}
+
+.mushroom-form input {
+  background-color: gray;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 0.05em black;
+}
+
+.mushroom-form-submit-button {
+  background-color: black!important;
+  border: none;
+  font-size: 0.6em;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-top: 0.7em;
+}
+
+.mushroom-form-submit-button:hover {
+  opacity: 0.7;
+}
+
+.mushroom-container {
+  margin-top: 2.5em;
+}
+
+.mushroomlist-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 2%;
+}
+
+.mushroom-card {
+  border: solid 1px gray;
+  text-align: center;
+  margin: 2%;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.mushroom-card:hover {
+  opacity: 0.7;
+  transform: scale(0.99);
+  transition: 0.5s
+}
+
+.mushroom-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 8px 8px 0px 0px;
+}
