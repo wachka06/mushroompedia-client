@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ScrollUpButton from "react-scroll-up-button";
 import './App.css';
 import './ress.css';
 import MushroomList from './components/MushroomList'
@@ -53,11 +54,13 @@ class App extends Component {
   }
 
   render () {
+    // console.log('s', this.state.mushrooms)
     return (
       <div className="App">
         <div className="add-mushroom" onClick={this.showForm}>add new collection</div>
         {this.state.showForm ? this.handleForm() : null}
         <div className="title">mushroompedia</div>
+        <ScrollUpButton />
         <MushroomList mushrooms={this.state.mushrooms} />
       </div>
     );
