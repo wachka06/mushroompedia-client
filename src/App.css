@@ -78,6 +78,10 @@
   border-bottom: solid 0.05em black;
 }
 
+.mushroom-form input:hover {
+  opacity: 0.3;
+}
+
 .mushroom-form-submit-button {
   background-color: black!important;
   border: none;
@@ -93,10 +97,6 @@
 }
 
 .mushroom-container {
-  margin-top: 2.5em;
-}
-
-.mushroomlist-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -104,6 +104,11 @@
   padding: 2%;
   top: 6%;
   z-index: -1;
+  margin-top: 2.5em;
+}
+
+.mushroom-form-title {
+  margin: 0.5em 0.5em 0 0.5em;
 }
 
 .mushroom-card {
@@ -124,4 +129,57 @@
   width: 280px;
   height: 280px;
   border-radius: 8px 8px 0px 0px;
+}
+
+/* SelectedMushroom */
+
+.mushroom-modal-wrap {
+  background-color: gray;
+  opacity: 0.95;
+  position: fixed;
+  top: 0;
+  width: 60%;
+  min-width: 830px;
+  height: 25em;
+  margin-top: 12%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 0.4em;
+}
+
+.mushroom-modal {
+  display: flex;
+}
+
+.mushroom-modal-img {
+  margin: 4em 2em 2em 2em;
+  display: inline-block;
+}
+
+.mushroom-modal-img img {
+  border-radius: 10em;
+}
+
+.mushroom-title {
+  text-align: center;
+}
+
+.mushroom-modal-info {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+}
+
+.mushroom-modal-info span {
+  font-weight: bold;
+}
+
+.displaymushroom-close-button {
+  font-size: 1.5em;
+  font-weight: bold;
+  float: right;
+  margin: 0.2em 0.6em;
+}
+
+.displaymushroom-close-button:hover {
+  color: red;
 }
