@@ -1,11 +1,10 @@
 import React from 'react';
 
-const Mushroom = (props) => {
-    // console.log('Mushroom', props)
+const Mushroom = ({mushroom, handleClick}) => {
     return (
-      <div className="mushroom-card" onClick={() => props.handleClick(props.mushroom)}>
-        <img className="mushroom-img" src={props.mushroom.img_url} alt="" />
-        <div>{props.mushroom.common_name[0]}</div>
+      <div className="mushroom-card" onClick={() => handleClick(mushroom)}>
+        <img className="mushroom-img" src={mushroom.img_url} alt="" />
+        <div>{mushroom.common_name[0]}</div>
       </div>
     );
 }
