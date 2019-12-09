@@ -1,14 +1,18 @@
 $color-white: white;
 $color-gray: #c3c3c3;
+$color-red: red;
 
-* {
-  font-family: "Apercu",Avenir,-apple-system,BlinkMacSystemFont,"Helvetica Neue",
-  Helvetica,"Calibri","Roboto",Arial,sans-serif;
+$sp: 480px;
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
 }
 
 .add-mushroom {
   font: {
-    size: .6em;
+    size: .6rem;
     weight: bold;
   }
   color: $color-white;
@@ -17,16 +21,15 @@ $color-gray: #c3c3c3;
   top: 0;
   right: 0;
   z-index: 2;
-  margin: 1em;
-
+  margin: 1rem;
   &:hover {
-    color: red;
+    color: $color-red;
   }
 }
 
 .title {
   font: {
-    size: 1.5em;
+    size: 1.5rem;
     weight: bold;
   }
   text-align: left;
@@ -38,6 +41,10 @@ $color-gray: #c3c3c3;
   right: 0;
   left: 0;
   z-index: 1;
+
+  @include sp {
+    text-align: center;
+  }
 }
 
 .mushroom-form-modal {
@@ -48,56 +55,55 @@ $color-gray: #c3c3c3;
   width: 50%;
   min-height: 490px;
   position: fixed;
-  top: 6em;
-  left: 10em;
-  right: 10em;
+  top: 6rem;
+  left: 10rem;
+  right: 10rem;
   z-index: 1;
-  border-radius: 0.4em;
+  border-radius: 0.4rem;
+
+  @include sp {
+
+  }
 }
 
 .mushroom-form-wrap {
   margin: 0 auto;
-  padding: 1em 3em 1em 3em;
+  padding: 1rem 3rem 1rem 3rem;
 }
 
 .close-button {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold;
   float: right;
-  margin: 0.2em 0.6em;
-
+  margin: 0.2rem 0.6rem;
   &:hover {
-    color: red;
+    color: $color-red;
   }
 }
 
 .mushroom-form {
-  padding: 0.5em 0.5em 0.5em 1.5em;
-  font-size: 0.9em;
-}
-
-.mushroom-form label {
-  display: block;
-}
-
-.mushroom-form input {
-  background-color: $color-gray;
-  border-bottom: solid .05em black;
-
-  &:hover {
-    opacity: 0.3;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  label {
+    display: block;
+  }
+  input {
+    background-color: $color-gray;
+    border-bottom: solid .05rem black;
+    &:hover {
+      opacity: 0.3;
+    }
   }
 }
-
 
 .mushroom-form-submit-button {
   background-color: black!important;
   border: none;
-  font-size: 0.6em;
+  font-size: 0.6rem;
   color: $color-white;
-  padding: 0.5em 1em;
-  border-radius: 0.5em;
-  margin-top: 0.7em;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.7rem;
 
   &:hover {
     opacity: 0.7;
@@ -118,11 +124,11 @@ MushroomList.js component
   padding: 2%;
   top: 6%;
   z-index: -1;
-  margin-top: 2.5em;
+  margin-top: 2.5rem;
 }
 
 .mushroom-form-title {
-  margin: 0.5em 0.5em 0 0.5em;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 }
 
 /*---------------------------------
@@ -157,14 +163,14 @@ Mushroom.js component
   background-color: $color-gray;
   opacity: 0.95;
   position: fixed;
-  top: 8em;
-  left: 5em;
-  right: 5em;
+  top: 8rem;
+  left: 5rem;
+  right: 5rem;
   width: 60%;
   min-width: 830px;
-  height: 25em;
+  height: 25rem;
   margin: 0 auto;
-  border-radius: 0.4em;
+  border-radius: 0.4rem;
 }
 
 .mushroom-modal {
@@ -172,40 +178,42 @@ Mushroom.js component
 }
 
 .mushroom-modal-img {
-  margin: 4em 2em 2em 2em;
+  margin: 4rem 2rem 2rem 2rem;
   display: inline-block;
-}
-
-.mushroom-modal-img img {
-  border-radius: 10em;
+  img {
+    border-radius: 10rem;
+  }
 }
 
 .mushroom-title {
   text-align: center;
+
+  @include sp {
+    margin: 0;
+  }
 }
 
 .mushroom-modal-info {
-  margin-top: 1.5em;
-  font-size: 0.9em;
-}
-
-.mushroom-modal-info span {
-  font-weight: bold;
+  margin-top: 1.5rem;
+  font-size: .9rem;
+  span {
+    font-weight: bold;
+  }
 }
 
 .radio-button {
-  margin-right: 0.2em;
+  margin-right: 0.2rem;
 }
 
 .displaymushroom-close-button {
   font: {
-    size: 1.5em;
+    size: 1.5rem;
     weight: bold;
   }
   float: right;
-  margin: 0.2em 0.6em;
+  margin: .2rem .6rem;
 
   &:hover {
-    color: red;
+    color: $color-red;
   }
 }
