@@ -4,11 +4,23 @@ $color-red: red;
 
 $sp: 480px;
 
-@mixin sp {
-  @media (max-width: ($sp)) {
-    @content;
-  }
+// @mixin breakpoint($value) {
+//   @media screen and (min-width: (`#{$value}px`)) {
+//     @content;
+//   }
+// }
+
+@media screen and (min-width: 700px) {
+  color: green;
 }
+
+// @mixin linebreak($width) {
+//   content: "";
+//   height: 2px;
+//   width: $width;
+//   border-bottom: 1px solid black;
+// }
+
 
 .add-mushroom {
   font: {
@@ -22,9 +34,18 @@ $sp: 480px;
   right: 0;
   z-index: 2;
   margin: 1rem;
+  //
+  // &:after {
+  //   @include line-break(100px);
+  // }
+
   &:hover {
     color: $color-red;
   }
+
+  // @include breakpoint(700) {
+  //   color: green;
+  // }
 }
 
 .title {
@@ -42,9 +63,9 @@ $sp: 480px;
   left: 0;
   z-index: 1;
 
-  @include sp {
-    text-align: center;
-  }
+  // @include sp {
+  //   text-align: center;
+  // }
 }
 
 .mushroom-form-modal {
@@ -61,9 +82,9 @@ $sp: 480px;
   z-index: 1;
   border-radius: 0.4rem;
 
-  @include sp {
-
-  }
+  // @include sp {
+  //
+  // }
 }
 
 .mushroom-form-wrap {
@@ -188,9 +209,9 @@ Mushroom.js component
 .mushroom-title {
   text-align: center;
 
-  @include sp {
-    margin: 0;
-  }
+  // @include sp {
+  //   margin: 0;
+  // }
 }
 
 .mushroom-modal-info {
